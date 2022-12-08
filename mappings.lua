@@ -2,14 +2,13 @@ return {
   -- first key is the mode
   n = {
     ["<leader>d"] = false,
-    ["<leader>c"] = false,
 
     ["<cr>"] = { "zt", desc = "Top The Line" },
-    -- second key is the lefthand side of the map
+    [",w"] = { "<esc>:w<cr>", desc = "Save" },
     ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
 
     -- mappings seen under group name "Buffer"
-    ["<leader>q"] = { ":Bdelete!<cr>", desc = "Quit Buffer" },
+    ["<leader>bT"] = { "<cmd>tabnew#<cr>", desc = "Opens the alternate buffer" },
     ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
     ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
@@ -17,7 +16,7 @@ return {
     ["<leader>bl"] = { "<cmd>BufferLineCloseRight<cr>", desc = "Close Right" },
     ["<leader>bh"] = { "<cmd>BufferLineCloseLeft<cr>", desc = "Close Left" },
 
-    ["<leader>cw"] = {
+    ["<leader>rw"] = {
       function()
         local word = vim.fn.expand "<cword>"
         local rp = vim.fn.input "Replace with: "
@@ -33,12 +32,16 @@ return {
     ["<F10>"] = { ":lua require('dap').step_over()<CR>", desc = "Debug Step Over" },
     ["<F11>"] = { ":lua require('dap').step_into()<CR>", desc = "Debug Step Into" },
     ["<F12>"] = { ":lua require('dap').step_out()<CR>", desc = "Debug Step Out" },
-    ["<Leader>dh"] = { ":lua require('dap.ui.variables').hover()<CR>", desc = "Debug Hover" },
+    ["<leader>dh"] = { ":lua require('dap.ui.variables').hover()<CR>", desc = "Debug Hover" },
   },
   i = {
+    ["<c-s>"] = { "<esc>:w<cr>", desc = "Save" },
+    [",w"] = { "<esc>:w<cr>", desc = "Save" },
+    [",,"] = { ",", desc = "" },
+    [",h"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
   },
   v = {
-    ["<Leader>dv"] = { ":lua require('dap.ui.variables').visual_hover()<CR>", desc = "Debug Hover" },
+    ["<leader>dv"] = { ":lua require('dap.ui.variables').visual_hover()<CR>", desc = "Debug Hover" },
   },
   t = {
     -- setting a mapping to false will disable it

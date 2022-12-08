@@ -5,7 +5,7 @@ return {
         shadow = true,
         nilness = true,
         unusedresult = true,
-        unusedparams = true,
+        unusedparams = false,
         unusedwrite = true,
         useany = true,
         unreachable = true,
