@@ -8,10 +8,7 @@ return {
   },
   window = {
     mappings = {
-        ["R"] = "set_root",
         ["l"] = "toggle_node",
-        ["h"] = "close_node",
-        ["."] = "toggle_hidden",
     }
   }
 }
