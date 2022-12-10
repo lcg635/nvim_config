@@ -27,5 +27,9 @@ return function(config)
     "s",
   })
 
+  config.sources = {
+    { name = "neorg" }
+  }
+
   return config
 end

@@ -26,17 +26,6 @@ return {
 
     ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
     ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
-
-    -- if vim.fn.executable "node" == 1 then
-    --   maps.n["<leader>tn"] = { function() toggle_term_cmd "node" end, desc = "ToggleTerm node" }
-    -- end
-
-    -- ["<F5>"] = { ":lua require('dap').toggle_breakpoint()<CR>", desc = "Toggle Breakpoint" },
-    -- ["<F9>"] = { ":lua require('dap').continue()<CR>", desc = "Debug Continue" },
-    -- ["<F10>"] = { ":lua require('dap').step_over()<CR>", desc = "Debug Step Over" },
-    -- ["<F11>"] = { ":lua require('dap').step_into()<CR>", desc = "Debug Step Into" },
-    -- ["<F12>"] = { ":lua require('dap').step_out()<CR>", desc = "Debug Step Out" },
-    -- ["<leader>dh"] = { ":lua require('dap.ui.variables').hover()<CR>", desc = "Debug Hover" },
   },
   i = {
     ["<c-s>"] = { "<esc>:w<cr>", desc = "Save" },
