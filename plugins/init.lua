@@ -3,6 +3,12 @@ return {
   "rebelot/kanagawa.nvim",
   "EdenEast/nightfox.nvim",
 
+  ["norcalli/nvim-colorizer.lua"] = {
+    config = function()
+      require("colorizer").setup()
+    end
+  },
+
   -- motion
   ["ggandor/leap.nvim"] = {
     after = { "nvim-cmp" },
@@ -11,49 +17,25 @@ return {
     end
   },
 
-  ["abecodes/tabout.nvim"] = {
-    wants = { "nvim-treesitter" },
-    after = { "nvim-cmp" },
-    config = function()
-      require("tabout").setup {}
-    end,
-  },
-
   -- note
-  ["nvim-neorg/neorg"] = {
-    run = ":Neorg sync-parsers", -- This is the important bit!
-    -- requires = {
-    --   "max397574/neorg-kanban",
-    -- },
+  ["nvim-orgmode/orgmode"] = {
     config = function()
-      require("neorg").setup {
-        load = {
-          ["core.defaults"] = {},
-          ["core.keybinds"] = {
-            config = {
-              neorg_leader = ","
-            }
-          },
-          ["core.norg.concealer"] = {},
-          ["core.norg.completion"] = {
-            config = { engine = "nvim-cmp" }
-          },
-          ["core.norg.dirman"] = {
-            config = {
-              workspaces = {
-                work = "~/notes/work",
-                home = "~/notes/home",
-              }
-            }
-          },
-          -- ["core.gtd.base"] = {
-          --   config = {
-          --     workspace = "home",
-          --   }
-          -- },
-          -- ["external.kanban"] = {},
+      require('orgmode').setup_ts_grammar()
+      require('nvim-treesitter.configs').setup {
+        -- If TS highlights are not enabled at all, or disabled via `disable` prop,
+        -- highlighting will fallback to default Vim syntax highlighting
+        highlight = {
+          enable = true,
+          -- Required for spellcheck, some LaTex highlights and
+          -- code block highlights that do not have ts grammar
+          additional_vim_regex_highlighting = { 'org' },
         },
+        ensure_installed = { 'org' }, -- Or run :TSUpdate org
       }
-    end,
-  }
+      require('orgmode').setup({
+        org_agenda_files = { '~/notes/**/*' },
+        org_default_notes_file = '~/notes/refile.org',
+      })
+    end
+  },
 }

@@ -5,8 +5,8 @@ return function(config)
     buffer = 500,
     path = 250,
   }
-  config.sources.insert({
+  config.sources.insert(
     { name = 'orgmode' }
-  })
+  )
   return config
 end

@@ -1,7 +1,7 @@
 return {
   -- first key is the mode
   n = {
-    -- ["<leader>d"] = false,
+    ["<leader>o"] = false,
 
     ["<cr>"] = { "zt", desc = "Top The Line" },
     [",w"] = { "<esc>:w<cr>", desc = "Save" },
@@ -16,28 +16,20 @@ return {
     ["<leader>bl"] = { "<cmd>BufferLineCloseRight<cr>", desc = "Close Right" },
     ["<leader>bh"] = { "<cmd>BufferLineCloseLeft<cr>", desc = "Close Left" },
 
-    ["<leader>rw"] = {
-      function()
-        local word = vim.fn.expand "<cword>"
-        local rp = vim.fn.input "Replace with: "
-        vim.cmd("%s/" .. word .. "/" .. rp .. "/g")
-      end,
-    },
-
     ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
     ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
   },
   i = {
-    ["<c-s>"] = { "<esc>:w<cr>", desc = "Save" },
     [",w"] = { "<esc>:w<cr>", desc = "Save" },
-    [",,"] = { ",", desc = "" },
-    [",h"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
+    [",,"] = { ",", desc = "," },
+    ["<c-h>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
+    ["<c-l>"] = { "<esc>A", desc = "go to end" },
   },
   v = {
     -- ["<leader>dv"] = { ":lua require('dap.ui.variables').visual_hover()<CR>", desc = "Debug Hover" },
   },
   t = {
     -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
+    ["<esc>"] = { "<C-\\><C-n>", desc = "esc" },
   },
 }
