@@ -3,6 +3,7 @@ return {
   n = {
     ["<leader>o"] = false,
 
+    ["<a-/>"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Comment line" },
     ["<cr>"] = { "zt", desc = "Top The Line" },
     [",w"] = { "<esc>:w<cr>", desc = "Save" },
     ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
@@ -20,13 +21,14 @@ return {
     ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
   },
   i = {
-    [",w"] = { "<esc>:w<cr>", desc = "Save" },
-    [",,"] = { ",", desc = "," },
-    ["<c-h>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
+    ["<c-s>"] = { "<esc>:w<cr>", desc = "Save" },
+    ["<c-u>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
     ["<c-l>"] = { "<esc>A", desc = "go to end" },
+    ["<c-h>"] = { "<esc>I", desc = "go to start" },
   },
   v = {
     -- ["<leader>dv"] = { ":lua require('dap.ui.variables').visual_hover()<CR>", desc = "Debug Hover" },
+    ["<a-/>"] = { "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", desc = "Comment" },
   },
   t = {
     -- setting a mapping to false will disable it

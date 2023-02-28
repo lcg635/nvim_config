@@ -2,13 +2,43 @@ return {
   -- themes
   "rebelot/kanagawa.nvim",
   "EdenEast/nightfox.nvim",
-
-  ["norcalli/nvim-colorizer.lua"] = {
+  'AlexvZyl/nordic.nvim',
+  -- ["norcalli/nvim-colorizer.lua"] = {
+  --   config = function()
+  --     require("colorizer").setup()
+  --   end
+  -- },
+  ["akinsho/flutter-tools.nvim"] = {
+    requires = 'nvim-lua/plenary.nvim',
+    after = { "mason-lspconfig.nvim", "nvim-dap" },
     config = function()
-      require("colorizer").setup()
+      require("flutter-tools").setup {
+        widget_guides = {
+          enabled = true,
+        },
+        dev_log = {
+          enabled = false,
+          open_cmd = "10 split"
+        },
+        debugger = {
+          enabled = true,
+          run_via_dap = true,
+        },
+        lsp = astronvim.lsp.server_settings "dartls"
+      }
+      require("telescope").load_extension("flutter")
     end
   },
-
+  ['kevinhwang91/nvim-ufo'] = {
+    requires = 'kevinhwang91/promise-async',
+    config = function()
+      require('ufo').setup({
+        provider_selector = function(bufnr, filetype, buftype)
+          return { 'treesitter', 'indent' }
+        end
+      })
+    end
+  },
   -- motion
   ["ggandor/leap.nvim"] = {
     after = { "nvim-cmp" },
@@ -16,7 +46,6 @@ return {
       require('leap').add_default_mappings()
     end
   },
-
   -- note
   ["nvim-orgmode/orgmode"] = {
     config = function()
