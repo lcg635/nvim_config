@@ -2,6 +2,8 @@
 vim.api.nvim_create_autocmd("Filetype", {
   pattern = "go",
   callback = function()
-    vim.keymap.set("i", ",v", " := ")
+    vim.cmd("iabbrev ,v <space>:=")
+    vim.cmd("iabbrev ,e if err != nil {<cr>return nil<esc>jo")
   end
 })
+
