@@ -5,7 +5,7 @@ return {
     H = { function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
 
     ["Q"] = { "<cmd>qa<cr>", desc = "Quit all" },
-    ["<c-D>"] = { "yyp", desc = "Copy line" },
+    -- ["<c-D>"] = { "yyp", desc = "Copy line" },
 
     ["<a-/>"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Comment line" },
     ["<cr>"] = { "zt", desc = "Top The Line" },
@@ -18,6 +18,7 @@ return {
     ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
 
     ["<leader>r"] = { ':%s/<c-r><c-w>/', desc = "Replace current word"},
+    ["<leader>R"] = { '<cmd>e!<cr>', desc = "Refresh buffers"},
   },
   i = {
     ["<c-s>"] = { "<esc>:w<cr>", desc = "Save" },
