@@ -12,7 +12,9 @@ return {
     [",w"] = { "<esc>:w<cr>", desc = "Save" },
     ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
 
-    ["<F12>"] = { "<cmd>ToggleTerm size=11 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
+    ["<F7>"] = false,
+    ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },
+    ["<F12>"] = { "<cmd>2ToggleTerm size=11 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
     ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
     ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
 
@@ -33,7 +35,8 @@ return {
     -- setting a mapping to false will disable it
     ["<esc>"] = { "<C-\\><C-n>", desc = "esc" },
     ["<F7>"] = false,
-    ["<F12>"] = { "<cmd>ToggleTerm<cr>", desc = "ToggleTerm horizontal split" },
+    ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },
+    ["<F12>"] = { "<cmd>2ToggleTerm<cr>", desc = "ToggleTerm horizontal split" },
   },
   c = {
     ["<c-w>"] = { "<c-r><c-w>", desc = "Copy current word to command prompt" }
