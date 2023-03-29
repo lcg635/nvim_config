@@ -8,7 +8,7 @@ return {
     -- ["<c-D>"] = { "yyp", desc = "Copy line" },
 
     ["<a-/>"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Comment line" },
-    ["<cr>"] = { "zt", desc = "Top The Line" },
+    ["<cr>"] = { "zz", desc = "Top The Line" },
     [",w"] = { "<esc>:w<cr>", desc = "Save" },
     ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
 
