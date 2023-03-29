@@ -12,7 +12,6 @@ return {
     [",w"] = { "<esc>:w<cr>", desc = "Save" },
     ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
 
-    ["<F7>"] = false,
     ["<F12>"] = { "<cmd>ToggleTerm size=11 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
     ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
     ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
