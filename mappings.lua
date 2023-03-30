@@ -10,7 +10,6 @@ return {
     ["<a-/>"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Comment line" },
     ["<cr>"] = { "zz", desc = "Top The Line" },
     [",w"] = { "<esc>:w<cr>", desc = "Save" },
-    ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
 
     ["<F7>"] = false,
     ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },
@@ -18,8 +17,11 @@ return {
     ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
     ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
 
+    ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
     ["<leader>r"] = { ':%s/<c-r><c-w>/', desc = "Replace current word"},
     ["<leader>R"] = { '<cmd>e!<cr>', desc = "Refresh buffers"},
+
+    ["<leader>fp"] = { "<cmd>Telescop projects<cr>", desc = "Find projects" },
   },
   i = {
     ["<c-s>"] = { "<esc>:w<cr>", desc = "Save" },
