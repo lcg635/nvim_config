@@ -22,6 +22,7 @@ return {
 
     ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
     ["<leader>fp"] = { "<cmd>Telescop projects<cr>", desc = "Find projects" },
+    ["<leader>ft"] = { "<cmd>TodoTelescop<cr>", desc = "Find todo" },
   },
   i = {
     ["<c-s>"] = { "<esc>:w<cr>", desc = "Save" },
