@@ -4,7 +4,6 @@ return {
     L = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
     H = { function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
     T = { "zt", desc = "Top The Line" },
-    B = { "zb", desc = "Bottom The Line" },
     ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
     ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
     ["<cr>"] = { "zz", desc = "Center The Line" },
