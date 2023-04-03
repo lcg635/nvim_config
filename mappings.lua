@@ -13,7 +13,8 @@ return {
     [",d"] = { "yyp", desc = "Copy line" },
     [",r"] = { ':%s/<c-r><c-w>/', desc = "Replace current word"},
     [",R"] = { '<cmd>e!<cr>', desc = "Refresh buffers"},
-    [",c"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Comment line" },
+    -- ["<c-/>"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Comment line" },
+    [",c"] = { "*Ncgn", desc = "Replace same word" },
 
     ["<F7>"] = false,
     ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },
@@ -30,7 +31,7 @@ return {
   },
   v = {
     -- ["<leader>dv"] = { ":lua require('dap.ui.variables').visual_hover()<CR>", desc = "Debug Hover" },
-    [",c"] = { "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", desc = "Comment" },
+    -- ["/"] = { "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", desc = "Comment" },
   },
   t = {
     -- setting a mapping to false will disable it
