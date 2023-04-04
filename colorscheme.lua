@@ -1,4 +1,5 @@
 -- return "nordic"
-return "kanagawa"
+-- return "kanagawa"
 -- return "dayfox"
 -- return "nightfox"
+return "rose-pine-moon"
