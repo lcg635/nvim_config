@@ -1,3 +1,5 @@
+local utils = require "astronvim.utils"
+
 return {
   -- first key is the mode
   n = {
@@ -15,6 +17,7 @@ return {
     [",R"] = { '<cmd>e!<cr>', desc = "Refresh buffers"},
     -- ["<c-/>"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Comment line" },
     [",c"] = { "*Ncgn", desc = "Replace same word" },
+    [",g"] = { function() utils.toggle_term_cmd "lazygit" end, desc = "ToggleTerm lazygit" },
 
     ["<F7>"] = false,
     ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },
