@@ -4,20 +4,31 @@ return {
   -- first key is the mode
   n = {
     L = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
-    H = { function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
+    H = { function() require("astronvim.utils.buffer").nav( -(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
     T = { "zt", desc = "Top The Line" },
     ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
-    ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
+    ["|"] = { "<cmd>pppp<cr>", desc = "Vertical split" },
     ["<cr>"] = { "zz", desc = "Center The Line" },
 
     [",w"] = { "<esc>:w<cr>", desc = "Save" },
     [",q"] = { "<cmd>qa<cr>", desc = "Quit all" },
     [",d"] = { "yyp", desc = "Copy line" },
-    [",r"] = { ':%s/<c-r><c-w>/', desc = "Replace current word"},
-    [",R"] = { '<cmd>e!<cr>', desc = "Refresh buffers"},
+    [",r"] = { ':%s/<c-r><c-w>/', desc = "Replace current word" },
+    [",R"] = { '<cmd>e!<cr>', desc = "Refresh buffers" },
     -- ["<c-/>"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Comment line" },
     [",c"] = { "*Ncgn", desc = "Replace same word" },
     [",g"] = { function() utils.toggle_term_cmd "lazygit" end, desc = "ToggleTerm lazygit" },
+    [",f"] = { function() require("telescope.builtin").find_files() end, desc = "Find files" },
+    [",s"] = { function() require("spectre").open() end, desc = "Spectre" },
+    [",S"] = { function() require("spectre").open_file_search() end, desc = "Spectre (current file)" },
+    -- [",s"] = {
+    --   function()
+    --     require("telescope.builtin").live_grep {
+    --       additional_args = function(args) return vim.list_extend(args, { "--hidden", "--no-ignore" }) end,
+    --     }
+    --   end,
+    --   desc = "Find words in all files",
+    -- },
 
     ["<F7>"] = false,
     ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },

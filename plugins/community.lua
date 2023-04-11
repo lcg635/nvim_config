@@ -6,6 +6,7 @@ return {
     { import = "astrocommunity/debugging/nvim-bqf" },
     { import = "astrocommunity/pack/go" },
     { import = "astrocommunity/pack/typescript" },
+    { import = "astrocommunity/project/nvim-spectre" },
     { import = "astrocommunity/editing-support/todo-comments-nvim" }
 }
 
