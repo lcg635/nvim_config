@@ -22,6 +22,13 @@ return {
     { import = "astrocommunity/pack/go" },
     { import = "astrocommunity/pack/typescript" },
     { import = "astrocommunity/project/nvim-spectre" },
+    { import = "astrocommunity/project/project-nvim" },
+    {
+        "project.nvim",
+        opts = {
+            patterns = { ".git", ".svn", "Makefile", "package.json" },
+            detection_methods = { "pattern" },
+        }
+    },
     { import = "astrocommunity/editing-support/todo-comments-nvim" }
 }
-
