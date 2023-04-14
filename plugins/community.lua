@@ -26,7 +26,7 @@ return {
     {
         "project.nvim",
         opts = {
-            patterns = { ".git", ".svn", "Makefile", "package.json" },
+            patterns = { ".git", ".svn", "package.json" },
             detection_methods = { "pattern" },
         }
     },
