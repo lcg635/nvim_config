@@ -22,20 +22,14 @@ return {
     [",f"] = { function() require("telescope.builtin").find_files() end, desc = "Find files" },
     [",s"] = { function() require("spectre").open() end, desc = "Spectre" },
     [",S"] = { function() require("spectre").open_file_search() end, desc = "Spectre (current file)" },
-    -- [",s"] = {
-    --   function()
-    --     require("telescope.builtin").live_grep {
-    --       additional_args = function(args) return vim.list_extend(args, { "--hidden", "--no-ignore" }) end,
-    --     }
-    --   end,
-    --   desc = "Find words in all files",
-    -- },
 
     ["<F7>"] = false,
     ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },
     ["<F12>"] = { "<cmd>2ToggleTerm size=11 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
 
     ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
+    ["<leader>rt"] = { "<cmd>OverseerToggle<cr>", desc = "OverseerToggle" },
+    ["<leader>rr"] = { "<cmd>OverseerRun<cr>", desc = "OverseerRun" },
     ["<leader>fp"] = { "<cmd>Telescop projects<cr>", desc = "Find projects" },
     ["<leader>fT"] = { function() require("telescope.builtin").colorscheme { enable_preview = true } end, desc = "Find themes" },
     ["<leader>ft"] = { "<cmd>TodoTelescop<cr>", desc = "Find todo" },

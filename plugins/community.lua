@@ -31,5 +31,7 @@ return {
         }
     },
     { import = "astrocommunity/motion/harpoon" },
-    { import = "astrocommunity/editing-support/todo-comments-nvim" }
+    { import = "astrocommunity/editing-support/todo-comments-nvim" },
+    { import = "astrocommunity/note-taking/neorg" },
+    { import = "astrocommunity/code-runner/overseer-nvim" }
 }
