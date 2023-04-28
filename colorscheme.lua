@@ -2,4 +2,5 @@
 -- return "kanagawa"
 -- return "dayfox"
 -- return "nightfox"
+-- return "gruvbox"
 return "rose-pine-moon"

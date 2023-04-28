@@ -2,6 +2,7 @@ return {
     "AstroNvim/astrocommunity",
     { import = "astrocommunity/colorscheme/kanagawa" },
     { import = "astrocommunity/colorscheme/rose-pine" },
+    { import = "astrocommunity/colorscheme/gruvbox" },
     { import = "astrocommunity/completion/copilot-lua" },
     {
         "copilot.lua",
@@ -36,7 +37,7 @@ return {
             detection_methods = { "pattern" },
         }
     },
-    { import = "astrocommunity/motion/harpoon" },
+    { import = "astrocommunity/motion/nvim-surround" },
     { import = "astrocommunity/editing-support/todo-comments-nvim" },
     { import = "astrocommunity/note-taking/neorg" },
     { import = "astrocommunity/code-runner/overseer-nvim" },
