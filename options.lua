@@ -1,6 +1,8 @@
 return {
   opt = {
     -- set to true or false etc.
+    background = "dark", -- sets vim.opt.background
+    -- background = "light", -- sets vim.opt.background
     relativenumber = false, -- sets vim.opt.relativenumber
     number = true, -- sets vim.opt.number
     spell = false, -- sets vim.opt.spell

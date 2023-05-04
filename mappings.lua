@@ -14,8 +14,6 @@ return {
     [",q"] = { "<cmd>confirm q<cr>", desc = "Quit" },
     [",d"] = { "yyp", desc = "Copy line" },
     [",r"] = { ':%s/<c-r><c-w>/', desc = "Replace current word" },
-    [",R"] = { '<cmd>e!<cr>', desc = "Refresh buffers" },
-    -- ["<c-/>"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Comment line" },
     [",c"] = { "*Ncgn", desc = "Replace same word" },
     [",g"] = { function() utils.toggle_term_cmd "lazygit" end, desc = "ToggleTerm lazygit" },
     [",f"] = { function() require("telescope.builtin").find_files() end, desc = "Find files" },
@@ -28,11 +26,14 @@ return {
     ["<F12>"] = { "<cmd>2ToggleTerm size=11 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
 
     ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
+    ["<leader>r"] = { desc = "Run" },
     ["<leader>rt"] = { "<cmd>OverseerToggle<cr>", desc = "OverseerToggle" },
     ["<leader>rr"] = { "<cmd>OverseerRun<cr>", desc = "OverseerRun" },
     ["<leader>fp"] = { "<cmd>Telescop projects<cr>", desc = "Find projects" },
     ["<leader>fT"] = { function() require("telescope.builtin").colorscheme { enable_preview = true } end, desc = "Find themes" },
     ["<leader>ft"] = { "<cmd>TodoTelescop<cr>", desc = "Find todo" },
+    ["<leader>bR"] = { '<cmd>e!<cr>', desc = "Refresh buffers" },
+    ["<leader>lA"] = { '<cmd>LspRestart<cr>', desc = "Restart lsp" },
   },
   i = {
     ["<c-s>"] = { "<esc>:w<cr>", desc = "Save" },
