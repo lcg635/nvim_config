@@ -11,7 +11,6 @@ return {
     ["<cr>"] = { "zz", desc = "Center The Line" },
     ["Q"] = { "<cmd>qa<cr>", desc = "Quit all" },
 
-    [",w"] = { "<esc>:w<cr>", desc = "Save" },
     [",q"] = { "<cmd>confirm q<cr>", desc = "Quit" },
     [",d"] = { "yyp", desc = "Copy line" },
     [",r"] = { ':%s/<c-r><c-w>/', desc = "Replace current word" },
@@ -22,6 +21,7 @@ return {
     [",f"] = { function() require("telescope.builtin").find_files() end, desc = "Find files" },
     [",s"] = { function() require("spectre").open() end, desc = "Spectre" },
     [",S"] = { function() require("spectre").open_file_search() end, desc = "Spectre (current file)" },
+    [",w"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", desc = "Spectre (current word)" },
 
     ["<F7>"] = false,
     ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },

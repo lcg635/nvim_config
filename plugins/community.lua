@@ -2,6 +2,7 @@ return {
     "AstroNvim/astrocommunity",
     { import = "astrocommunity/colorscheme/kanagawa" },
     { import = "astrocommunity/colorscheme/rose-pine" },
+    { import = "astrocommunity/colorscheme/everforest" },
     { import = "astrocommunity/completion/copilot-lua" },
     {
         "copilot.lua",
