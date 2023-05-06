@@ -3,6 +3,31 @@ return {
   -- "rebelot/kanagawa.nvim",
   "EdenEast/nightfox.nvim",
   "AlexvZyl/nordic.nvim",
+  {
+    "gelguy/wilder.nvim",
+    event = "VeryLazy",
+    config = function()
+      local wilder = require("wilder")
+      wilder.setup({ modes = { ':', '/', '?' } })
+      wilder.set_option('pipeline', {
+        wilder.branch(
+          wilder.cmdline_pipeline({
+            language = 'vim',
+            fuzzy = 1,
+          })
+        ),
+      })
+      wilder.set_option('renderer', wilder.popupmenu_renderer(
+        wilder.popupmenu_border_theme({
+          highlights = {
+            border = 'Normal', -- highlight to use for the border
+          },
+          border = 'rounded',
+          highlighter = wilder.basic_highlighter(),
+        })
+      ))
+    end
+  },
   -- ["norcalli/nvim-colorizer.lua"] = {
   --   config = function()
   --     require("colorizer").setup()
@@ -16,7 +41,7 @@ return {
       require("flutter-tools").setup {
         widget_guides = {
           enabled = true,
-      },
+        },
         dev_log = {
           enabled = false,
           open_cmd = "10 split"
