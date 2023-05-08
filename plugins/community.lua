@@ -26,13 +26,12 @@ return {
             if not opts.options then opts.options = {} end
             opts.options.seperator_style = "slant"
 
-            local highlights = require("nord").bufferline.highlights({
-                italic = true,
-                bold = true,
-                fill = "#181c24",
-            })
-
-            opts.highlights = highlights
+            -- local highlights = require("nord").bufferline.highlights({
+            --     italic = true,
+            --     bold = true,
+            -- })
+            --
+            -- opts.highlights = highlights
             return opts
         end,
     },

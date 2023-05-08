@@ -11,7 +11,6 @@ return {
     tabstop = 4,
     shiftwidth = 4,
     softtabstop = 4,
-    termguicolors = true,
     guifont = "FiraCode Nerd Font:h8",
   },
 
