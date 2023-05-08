@@ -17,8 +17,8 @@ return {
     [",c"] = { "*Ncgn", desc = "Replace same word" },
     [",g"] = { function() utils.toggle_term_cmd "lazygit" end, desc = "ToggleTerm lazygit" },
     [",f"] = { function() require("telescope.builtin").find_files() end, desc = "Find files" },
-    [",w"] = { function() require("spectre").open() end, desc = "Spectre" },
-    [",s"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", desc = "Spectre (current word)" },
+    [",s"] = { function() require("spectre").open() end, desc = "Spectre" },
+    [",w"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", desc = "Spectre (current word)" },
 
     ["<F7>"] = false,
     ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },
