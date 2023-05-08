@@ -11,8 +11,10 @@ return {
     tabstop = 4,
     shiftwidth = 4,
     softtabstop = 4,
-    -- guifont = "FiraCode Nerd Font:h8",
+    termguicolors = true,
+    guifont = "FiraCode Nerd Font:h8",
   },
+
   g = {
     mapleader = " ", -- sets vim.g.mapleader
     autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)

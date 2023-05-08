@@ -2,7 +2,7 @@ return {
     "AstroNvim/astrocommunity",
     { import = "astrocommunity/colorscheme/kanagawa" },
     { import = "astrocommunity/colorscheme/rose-pine" },
-    { import = "astrocommunity/colorscheme/everforest" },
+    { import = "astrocommunity/colorscheme/nord-nvim" },
     { import = "astrocommunity/completion/copilot-lua" },
     {
         "copilot.lua",
@@ -18,6 +18,24 @@ return {
                 },
             },
         }
+    },
+    { import = "astrocommunity/bars-and-lines/bufferline-nvim" },
+    {
+        "akinsho/bufferline.nvim",
+        opts = function(_, opts)
+            if not opts.options then opts.options = {} end
+            opts.options.seperator_style = "slant"
+            -- opts.options.seperator_style = "padded_slope"
+
+            -- local highlights = require("nord").bufferline.highlights({
+            --     italic = true,
+            --     bold = true,
+            --     fill = "#181c24",
+            -- })
+            --
+            -- opts.highlights = highlights
+            return opts
+        end,
     },
     { import = "astrocommunity/debugging/nvim-bqf" },
     { import = "astrocommunity/pack/go" },

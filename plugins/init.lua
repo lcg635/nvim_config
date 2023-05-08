@@ -1,8 +1,6 @@
 return {
   -- themes
-  -- "rebelot/kanagawa.nvim",
   "EdenEast/nightfox.nvim",
-  "AlexvZyl/nordic.nvim",
   {
     "gelguy/wilder.nvim",
     event = "VeryLazy",
