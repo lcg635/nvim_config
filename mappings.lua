@@ -37,7 +37,7 @@ return {
   i = {
     ["<c-s>"] = { "<esc>:w<cr>", desc = "Save" },
     ["<c-u>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
-    ["<c-l>"] = { "<esc>A", desc = "go to end" },
+    ["<c-e>"] = { "<esc>A", desc = "go to end" },
     ["<c-h>"] = { "<esc>I", desc = "go to start" },
   },
   v = {
