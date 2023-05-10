@@ -6,6 +6,7 @@ return {
     L = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
     H = { function() require("astronvim.utils.buffer").nav( -(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
     T = { "zt", desc = "Top The Line" },
+
     ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
     ["|"] = { "<cmd>vsp<cr>", desc = "Vertical split" },
     ["<cr>"] = { "zz", desc = "Center The Line" },
@@ -35,6 +36,7 @@ return {
     ["<leader>lA"] = { '<cmd>LspRestart<cr>', desc = "Restart lsp" },
   },
   i = {
+    ["jk"] = { "<esc>:w<cr>", desc = "Save" },
     ["<c-s>"] = { "<esc>:w<cr>", desc = "Save" },
     ["<c-u>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
     ["<c-e>"] = { "<esc>A", desc = "go to end" },
