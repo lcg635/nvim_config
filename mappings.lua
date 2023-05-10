@@ -36,7 +36,6 @@ return {
     ["<leader>lA"] = { '<cmd>LspRestart<cr>', desc = "Restart lsp" },
   },
   i = {
-    ["jk"] = { "<esc>:w<cr>", desc = "Save" },
     ["<c-s>"] = { "<esc>:w<cr>", desc = "Save" },
     ["<c-u>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
     ["<c-e>"] = { "<esc>A", desc = "go to end" },
@@ -47,8 +46,6 @@ return {
     -- ["/"] = { "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", desc = "Comment" },
   },
   t = {
-    -- setting a mapping to false will disable it
-    ["<esc>"] = { "<C-\\><C-n>", desc = "esc" },
     ["<F7>"] = false,
     ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },
     ["<F12>"] = { "<cmd>2ToggleTerm<cr>", desc = "ToggleTerm horizontal split" },
