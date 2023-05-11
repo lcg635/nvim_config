@@ -22,6 +22,7 @@ return {
     { import = "astrocommunity/debugging/nvim-bqf" },
     { import = "astrocommunity/pack/go" },
     { import = "astrocommunity/pack/typescript" },
+    { import = "astrocommunity/pack/docker" },
     { import = "astrocommunity/project/nvim-spectre" },
     {
         "nvim-pack/nvim-spectre",
