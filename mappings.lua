@@ -33,6 +33,7 @@ return {
     ["<leader>fT"] = { function() require("telescope.builtin").colorscheme { enable_preview = true } end, desc = "Find themes" },
     ["<leader>ft"] = { "<cmd>TodoTelescop<cr>", desc = "Find todo" },
     ["<leader>bR"] = { '<cmd>e!<cr>', desc = "Refresh buffers" },
+    ["<leader>bj"] = { '<cmd>e #<cr>', desc = "Last buffers" },
     ["<leader>lA"] = { '<cmd>LspRestart<cr>', desc = "Restart lsp" },
   },
   i = {
