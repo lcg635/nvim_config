@@ -26,6 +26,14 @@ return {
       ))
     end
   },
+  {
+    "Pocco81/auto-save.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("auto-save").setup {
+      }
+    end,
+  },
   -- {
   --   "akinsho/flutter-tools.nvim",
   --   requires = 'nvim-lua/plenary.nvim',

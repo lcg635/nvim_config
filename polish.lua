@@ -3,13 +3,13 @@ return function()
   require("user.autocmds.dart")
   require("user.autocmds.utils")
 
-  -- 移除背景色
+  -- 添加离开插入模式后的操作
   vim.api.nvim_create_autocmd({ "InsertLeave" }, {
     callback = function()
-      -- io.popen("fcitx5-remote -c")
-      
-      -- auto save file
-      -- vim.cmd("silent! w")
+      -- 判断当前的操作系统是不是linux
+      if vim.fn.has("unix") == 1 then
+        io.popen("fcitx5-remote -c")
+      end
     end,
   })
 end
