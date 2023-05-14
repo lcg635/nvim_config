@@ -37,7 +37,6 @@ return {
     ["<leader>lA"] = { '<cmd>LspRestart<cr>', desc = "Restart lsp" },
   },
   i = {
-    ["<c-s>"] = { "<esc>:w<cr>", desc = "Save" },
     ["<c-u>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
     ["<c-e>"] = { "<esc>A", desc = "go to end" },
     ["<c-h>"] = { "<esc>I", desc = "go to start" },
