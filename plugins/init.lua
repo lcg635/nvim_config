@@ -6,7 +6,10 @@ return {
     event = "VeryLazy",
     config = function()
       local wilder = require("wilder")
-      wilder.setup({ modes = { ':', '/', '?' } })
+      wilder.setup({
+        modes = { ':', '/', '?' },
+        enable_cmdline_enter = 0,
+      })
       wilder.set_option('pipeline', {
         wilder.branch(
           wilder.cmdline_pipeline({
