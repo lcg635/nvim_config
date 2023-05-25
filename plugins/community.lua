@@ -20,6 +20,7 @@ return {
         }
     },
     { import = "astrocommunity/debugging/nvim-bqf" },
+    { import = "astrocommunity/motion/hop-nvim" },
     { import = "astrocommunity/pack/go" },
     { import = "astrocommunity/pack/typescript" },
     { import = "astrocommunity/pack/docker" },

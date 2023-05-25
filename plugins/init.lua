@@ -34,38 +34,8 @@ return {
     event = "VeryLazy",
     config = function()
       require("auto-save").setup {
+        debounce_delay = 1000,
       }
     end,
-  },
-  -- {
-  --   "akinsho/flutter-tools.nvim",
-  --   requires = 'nvim-lua/plenary.nvim',
-  --   after = { "mason-lspconfig.nvim", "nvim-dap" },
-  --   config = function()
-  --     require("flutter-tools").setup {
-  --       widget_guides = {
-  --         enabled = true,
-  --       },
-  --       dev_log = {
-  --         enabled = false,
-  --         open_cmd = "10 split"
-  --       },
-  --       debugger = {
-  --         enabled = true,
-  --         run_via_dap = true,
-  --       },
-  --       lsp = astronvim.lsp.server_settings "dartls"
-  --     }
-  --     require("telescope").load_extension("flutter")
-  --   end
-  -- },
-  -- motion
-  {
-    "ggandor/leap.nvim",
-    after = { "nvim-cmp" },
-    event = "BufRead",
-    config = function()
-      require('leap').add_default_mappings()
-    end
   },
 }
