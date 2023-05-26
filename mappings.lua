@@ -26,6 +26,7 @@ return {
     ["<F12>"] = { "<cmd>2ToggleTerm size=11 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
 
     ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
+    ["<leader>z"] = { "<cmd>ZenMode<cr>", desc = "Zend Mode"},
     ["<leader>r"] = { desc = "Run" },
     ["<leader>rt"] = { "<cmd>OverseerToggle<cr>", desc = "OverseerToggle" },
     ["<leader>rr"] = { "<cmd>OverseerRun<cr>", desc = "OverseerRun" },
