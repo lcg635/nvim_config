@@ -13,7 +13,7 @@ return {
     ["Q"] = { "<cmd>qa<cr>", desc = "Quit all" },
 
     [",q"] = { "<cmd>confirm q<cr>", desc = "Quit" },
-    [",d"] = { "yyp", desc = "Copy line" },
+    [",d"] = { "<cmd>OverseerRun<cr>", desc = "OverseerRun" },
     [",r"] = { ':%s/<c-r><c-w>/', desc = "Replace current word" },
     [",c"] = { "*Ncgn", desc = "Replace same word" },
     [",g"] = { function() utils.toggle_term_cmd "lazygit" end, desc = "ToggleTerm lazygit" },
@@ -26,7 +26,7 @@ return {
     ["<F12>"] = { "<cmd>2ToggleTerm size=11 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
 
     ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
-    ["<leader>z"] = { "<cmd>ZenMode<cr>", desc = "Zend Mode"},
+    ["<leader>e"] = { "<cmd>ZenMode<cr>", desc = "Zend Mode"},
     ["<leader>r"] = { desc = "Run" },
     ["<leader>rt"] = { "<cmd>OverseerToggle<cr>", desc = "OverseerToggle" },
     ["<leader>rr"] = { "<cmd>OverseerRun<cr>", desc = "OverseerRun" },
