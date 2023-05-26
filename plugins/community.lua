@@ -22,6 +22,16 @@ return {
     { import = "astrocommunity/debugging/nvim-bqf" },
     { import = "astrocommunity/motion/hop-nvim" },
     { import = "astrocommunity/editing-support/zen-mode-nvim" },
+    {
+        "zen-mode.nvim",
+        opts =  {
+            window = {
+                options = {
+                    number = true
+                }
+            }
+        }
+    },
     { import = "astrocommunity/pack/go" },
     { import = "astrocommunity/pack/typescript" },
     { import = "astrocommunity/pack/docker" },
