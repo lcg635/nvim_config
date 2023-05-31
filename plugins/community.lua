@@ -44,13 +44,13 @@ return {
         }
     },
     -- { import = "astrocommunity/project/project-nvim" },
-    {
-        "project.nvim",
-        opts = {
-            patterns = { ".git", ".svn", "package.json" },
-            detection_methods = { "pattern" },
-        }
-    },
+    -- {
+    --     "project.nvim",
+    --     opts = {
+    --         patterns = { ".git", ".svn", "package.json" },
+    --         detection_methods = { "pattern" },
+    --     }
+    -- },
     -- { import = "astrocommunity/motion/nvim-surround" },
     { import = "astrocommunity/motion/nvim-spider" },
     { import = "astrocommunity/editing-support/todo-comments-nvim" },
