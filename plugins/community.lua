@@ -43,7 +43,7 @@ return {
             open_cmd = "70vnew"
         }
     },
-    { import = "astrocommunity/project/project-nvim" },
+    -- { import = "astrocommunity/project/project-nvim" },
     {
         "project.nvim",
         opts = {
