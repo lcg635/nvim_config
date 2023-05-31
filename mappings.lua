@@ -36,6 +36,7 @@ return {
     ["<leader>bR"] = { '<cmd>e!<cr>', desc = "Refresh buffers" },
     ["<leader>bj"] = { '<cmd>e #<cr>', desc = "Last buffers" },
     ["<leader>lA"] = { '<cmd>LspRestart<cr>', desc = "Restart lsp" },
+    ["<leader>uA"] = { "<cmd>ASToggle<cr>", desc = "Toggle auto-save" },
   },
   i = {
     ["<c-u>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },

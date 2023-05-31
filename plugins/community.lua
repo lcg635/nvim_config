@@ -1,8 +1,9 @@
 return {
     "AstroNvim/astrocommunity",
-    { import = "astrocommunity/colorscheme/kanagawa" },
+    { import = "astrocommunity/colorscheme/kanagawa-nvim" },
     { import = "astrocommunity/colorscheme/rose-pine" },
-    { import = "astrocommunity/colorscheme/nord-nvim" },
+    { import = "astrocommunity/colorscheme/nvim-juliana" },
+    { import = "astrocommunity/colorscheme/onedarkpro-nvim" },
     { import = "astrocommunity/completion/copilot-lua" },
     {
         "copilot.lua",
@@ -55,33 +56,5 @@ return {
     { import = "astrocommunity/editing-support/todo-comments-nvim" },
     { import = "astrocommunity/note-taking/neorg" },
     { import = "astrocommunity/code-runner/overseer-nvim" },
-    -- { import = "astrocommunity/utility/noice-nvim" },
-    -- {
-    --     "folke/noice.nvim",
-    --     opts = {
-    --         views = {
-    --             cmdline_popup = {
-    --                 position = {
-    --                     row = "30%",
-    --                     col = "50%",
-    --                 },
-    --                 size = {
-    --                     width = 60,
-    --                     height = "auto",
-    --                 },
-    --             },
-    --             popupmenu = {
-    --                 relative = "editor",
-    --                 position = {
-    --                     row = "43%",
-    --                     col = "50%",
-    --                 },
-    --                 size = {
-    --                     width = 60,
-    --                     height = 10,
-    --                 },
-    --             }
-    --         },
-    --     }
-    -- }
+    { import = "astrocommunity/scrolling/satellite-nvim" },
 }
