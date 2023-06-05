@@ -52,7 +52,7 @@ return {
     --     }
     -- },
     -- { import = "astrocommunity/motion/nvim-surround" },
-    { import = "astrocommunity/motion/nvim-spider" },
+    -- { import = "astrocommunity/motion/nvim-spider" },
     { import = "astrocommunity/editing-support/todo-comments-nvim" },
     { import = "astrocommunity/note-taking/neorg" },
     { import = "astrocommunity/code-runner/overseer-nvim" },
