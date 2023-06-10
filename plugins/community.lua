@@ -43,18 +43,16 @@ return {
             open_cmd = "70vnew"
         }
     },
-    -- { import = "astrocommunity/project/project-nvim" },
-    -- {
-    --     "project.nvim",
-    --     opts = {
-    --         patterns = { ".git", ".svn", "package.json" },
-    --         detection_methods = { "pattern" },
-    --     }
-    -- },
     -- { import = "astrocommunity/motion/nvim-surround" },
     -- { import = "astrocommunity/motion/nvim-spider" },
     { import = "astrocommunity/editing-support/todo-comments-nvim" },
     -- { import = "astrocommunity/note-taking/neorg" },
-    { import = "astrocommunity/code-runner/overseer-nvim" },
+    -- { import = "astrocommunity/code-runner/overseer-nvim" },
+    -- {
+    --     "stevearc/overseer.nvim",
+    --     opts = {
+    --         templates = { "cargo", "make", "npm", "vscode" }
+    --     }
+    -- },
     { import = "astrocommunity/scrolling/satellite-nvim" },
 }

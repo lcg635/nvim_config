@@ -28,8 +28,9 @@ return {
 
     ["<leader>."] = { "<cmd>cd %:p:h<cr>", desc = "Set CWD" },
     ["<leader>r"] = { desc = "Run" },
-    ["<leader>rt"] = { "<cmd>OverseerToggle<cr>", desc = "OverseerToggle" },
-    ["<leader>rr"] = { "<cmd>OverseerRun<cr>", desc = "OverseerRun" },
+    ["<leader>rr"] = { "<cmd>ExecutorRun<cr>", desc = "ExecutorRun" },
+    ["<leader>rp"] = { "<cmd>ExecutorShowPresets<cr>", desc = "ExecutorShowPresets" },
+    ["<leader>rs"] = { "<cmd>ExecutorToggleDetail<cr>", desc = "ExecutorToggleDetail" },
     ["<leader>fT"] = { function() require("telescope.builtin").colorscheme { enable_preview = true } end, desc = "Find themes" },
     ["<leader>ft"] = { "<cmd>TodoTelescop<cr>", desc = "Find todo" },
     ["<leader>bR"] = { '<cmd>e!<cr>', desc = "Refresh buffers" },
