@@ -25,7 +25,7 @@ return {
     { import = "astrocommunity/editing-support/zen-mode-nvim" },
     {
         "zen-mode.nvim",
-        opts =  {
+        opts = {
             window = {
                 options = {
                     number = true
@@ -47,12 +47,21 @@ return {
     -- { import = "astrocommunity/motion/nvim-spider" },
     { import = "astrocommunity/editing-support/todo-comments-nvim" },
     -- { import = "astrocommunity/note-taking/neorg" },
-    -- { import = "astrocommunity/code-runner/overseer-nvim" },
-    -- {
-    --     "stevearc/overseer.nvim",
-    --     opts = {
-    --         templates = { "cargo", "make", "npm", "vscode" }
-    --     }
-    -- },
+    { import = "astrocommunity/code-runner/overseer-nvim" },
+    {
+        "stevearc/overseer.nvim",
+        opts = {
+            templates = { "cargo", "make", "npm", "vscode" }
+        }
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        opts = function(_, opts)
+            if opts.ensure_installed ~= "all" then
+                local utils = require "astronvim.utils"
+                opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, "make")
+            end
+        end,
+    },
     { import = "astrocommunity/scrolling/satellite-nvim" },
 }

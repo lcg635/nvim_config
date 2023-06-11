@@ -36,16 +36,13 @@ return {
       }
     end,
   },
-  {
-    "google/executor.nvim",
-    event = "VeryLazy",
-    depends = { "MunifTanjim/nui.nvim" },
-    config = function()
-      require("executor").setup({
-        preset_commands = {
-          ["/home/lcg"] = { "make restart" }
-        },
-      })
-    end,
-  }
+  -- {
+  --   "desdic/greyjoy.nvim",
+  --   event = "VeryLazy",
+  --   config = function()
+  --     local greyjoy = require("greyjoy")
+  --     greyjoy.setup { }
+  --     greyjoy.load_extension("makefile")
+  --   end,
+  -- }
 }
