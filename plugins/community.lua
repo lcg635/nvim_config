@@ -51,7 +51,8 @@ return {
     {
         "stevearc/overseer.nvim",
         opts = {
-            templates = { "cargo", "make", "npm", "vscode" }
+            templates = { "cargo", "make", "npm", "vscode" },
+            template_cache_threshold = 0
         }
     },
     {
@@ -63,5 +64,5 @@ return {
             end
         end,
     },
-    { import = "astrocommunity/scrolling/satellite-nvim" },
+    { import = "astrocommunity/scrolling/neoscroll-nvim" },
 }
