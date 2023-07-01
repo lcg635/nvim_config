@@ -1,5 +1,9 @@
 return {
   {
+    "hrsh7th/cmp-nvim-lsp-signature-help",
+    event = "VeryLazy"
+  },
+  {
     "gelguy/wilder.nvim",
     event = "VeryLazy",
     config = function()
@@ -27,15 +31,15 @@ return {
       ))
     end
   },
-  {
-    "Pocco81/auto-save.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("auto-save").setup {
-        debounce_delay = 1000,
-      }
-    end,
-  },
+  -- {
+  --   "Pocco81/auto-save.nvim",
+  --   event = "VeryLazy",
+  --   config = function()
+  --     require("auto-save").setup {
+  --       debounce_delay = 1000,
+  --     }
+  --   end,
+  -- },
   -- {
   --   "desdic/greyjoy.nvim",
   --   event = "VeryLazy",

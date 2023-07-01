@@ -14,7 +14,7 @@ return {
     ["P"] = { "viwp", desc = "Replace" },
 
     [",q"] = { "<cmd>confirm q<cr>", desc = "Quit" },
-    [",e"] = { "<cmd>ZenMode<cr>", desc = "Zend Mode"},
+    [",e"] = { "<cmd>ZenMode<cr>", desc = "Zend Mode" },
     [",d"] = { "<cmd>OverseerRun<cr>", desc = "OverseerRun" },
     [",r"] = { ':%s/<c-r><c-w>/', desc = "Replace current word" },
     [",c"] = { "*Ncgn", desc = "Replace same word" },
@@ -46,6 +46,7 @@ return {
     ["<c-u>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
     ["<c-e>"] = { "<esc>A", desc = "go to end" },
     ["<c-h>"] = { "<esc>I", desc = "go to start" },
+    ["<C-k>"] = { function() require("cmp").complete() end, desc = "k" },
   },
   v = {
     -- ["<leader>dv"] = { ":lua require('dap.ui.variables').visual_hover()<CR>", desc = "Debug Hover" },

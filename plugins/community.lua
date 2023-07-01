@@ -33,9 +33,11 @@ return {
             }
         }
     },
+    -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
     { import = "astrocommunity/pack/go" },
     { import = "astrocommunity/pack/docker" },
     { import = "astrocommunity/pack/rust" },
+    -- { import = "astrocommunity/project/project-nvim" },
     { import = "astrocommunity/project/nvim-spectre" },
     {
         "nvim-pack/nvim-spectre",

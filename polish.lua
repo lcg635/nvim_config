@@ -13,18 +13,9 @@ return function()
       if vim.fn.has("linux") == 1 then
         io.popen("fcitx5-remote -c")
       end
+      -- vim.cmd("w")
     end,
   })
-
-  vim.api.nvim_create_user_command("OverseerRestartLast", function()
-    local overseer = require("overseer")
-    local tasks = overseer.list_tasks({ recent_first = true })
-    if vim.tbl_isempty(tasks) then
-      vim.notify("No tasks found", vim.log.levels.WARN)
-    else
-      overseer.run_action(tasks[1], "restart")
-    end
-  end, {})
 
   vim.api.nvim_create_autocmd({ 'User' }, {
     pattern = "SessionLoadPost",
