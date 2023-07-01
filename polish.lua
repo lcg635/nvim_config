@@ -13,7 +13,15 @@ return function()
       if vim.fn.has("linux") == 1 then
         io.popen("fcitx5-remote -c")
       end
-      -- vim.cmd("w")
+
+      -- auto save
+      -- local buf = vim.api.nvim_get_current_buf()
+      -- vim.api.nvim_buf_call(buf, function()
+      --   -- print('auto save')
+      --   -- vim.lsp.buf.format()
+      --   require('notify').notify("auto save")
+      --   vim.cmd("silent! write")
+      -- end)
     end,
   })
 
