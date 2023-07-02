@@ -45,6 +45,7 @@ return {
   },
   v = {
     ["t"] = {":'<,'>TranslateW --engines=google<cr>", desc = "Translate with google" },
+    ["T"] = {":'<,'>TranslateW --engines=google --target_lang=en<cr>", desc = "Translate with google" },
     -- ["<leader>dv"] = { ":lua require('dap.ui.variables').visual_hover()<CR>", desc = "Debug Hover" },
     -- ["/"] = { "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", desc = "Comment" },
   },
