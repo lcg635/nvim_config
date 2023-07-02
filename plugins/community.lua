@@ -37,6 +37,7 @@ return {
     { import = "astrocommunity/pack/go" },
     { import = "astrocommunity/pack/docker" },
     { import = "astrocommunity/pack/rust" },
+    { import = "astrocommunity/pack/cpp" },
     -- { import = "astrocommunity/project/project-nvim" },
     { import = "astrocommunity/project/nvim-spectre" },
     {

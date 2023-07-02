@@ -46,7 +46,7 @@ return {
     ["<c-u>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
     ["<c-e>"] = { "<esc>A", desc = "go to end" },
     ["<c-h>"] = { "<esc>I", desc = "go to start" },
-    ["<C-k>"] = { function() require("cmp").complete() end, desc = "k" },
+    ["<C-i>"] = { "(<esc>Ea)", desc = "wrap ()" },
   },
   v = {
     -- ["<leader>dv"] = { ":lua require('dap.ui.variables').visual_hover()<CR>", desc = "Debug Hover" },
