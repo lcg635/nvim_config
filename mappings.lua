@@ -12,6 +12,7 @@ return {
     ["<cr>"] = { "zz", desc = "Center The Line" },
     ["Q"] = { "<cmd>qa<cr>", desc = "Quit all" },
     ["P"] = { "viwp", desc = "Replace Word" },
+    ["t"] = {"<cmd>TranslateW<cr>", desc = "Translate with bing" },
 
     [",q"] = { "<cmd>confirm q<cr>", desc = "Quit" },
     [",e"] = { "<cmd>ZenMode<cr>", desc = "Zend Mode" },
@@ -43,6 +44,7 @@ return {
     ["<C-i>"] = { "(<esc>Ea)", desc = "wrap ()" },
   },
   v = {
+    ["t"] = {":'<,'>TranslateW --engines=google<cr>", desc = "Translate with google" },
     -- ["<leader>dv"] = { ":lua require('dap.ui.variables').visual_hover()<CR>", desc = "Debug Hover" },
     -- ["/"] = { "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", desc = "Comment" },
   },
