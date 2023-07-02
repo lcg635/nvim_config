@@ -38,7 +38,7 @@ return {
     { import = "astrocommunity/pack/docker" },
     { import = "astrocommunity/pack/rust" },
     { import = "astrocommunity/pack/cpp" },
-    -- { import = "astrocommunity/project/project-nvim" },
+    { import = "astrocommunity/project/project-nvim" },
     { import = "astrocommunity/project/nvim-spectre" },
     {
         "nvim-pack/nvim-spectre",
@@ -50,7 +50,7 @@ return {
     -- { import = "astrocommunity/motion/nvim-spider" },
     { import = "astrocommunity/editing-support/todo-comments-nvim" },
     -- { import = "astrocommunity/note-taking/neorg" },
-    { import = "astrocommunity/code-runner/overseer-nvim" },
+    -- { import = "astrocommunity/code-runner/overseer-nvim" },
     {
         "stevearc/overseer.nvim",
         opts = {
