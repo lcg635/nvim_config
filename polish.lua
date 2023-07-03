@@ -16,15 +16,6 @@ return function()
     end,
   })
 
-  -- vim.api.nvim_create_autocmd({"TextChanged"}, {
-  --   group = basicGroup,
-  --   callback = function(args)
-  --     local t = vim.fn.undotree()
-  --     require("notify").notify(vim.inspect(t.seq_last))
-  --     require("notify").notify(vim.inspect(t.seq_cur))
-  --   end
-  -- })
-
   vim.api.nvim_create_autocmd({ 'User' }, {
     pattern = "SessionLoadPost",
     group = basicGroup,

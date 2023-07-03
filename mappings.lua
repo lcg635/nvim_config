@@ -15,14 +15,15 @@ return {
     ["t"] = {"<cmd>TranslateW<cr>", desc = "Translate with bing" },
 
     [",q"] = { "<cmd>confirm q<cr>", desc = "Quit" },
-    [",e"] = { "<cmd>ZenMode<cr>", desc = "Zend Mode" },
     [",r"] = { ':%s/<c-r><c-w>/', desc = "Replace current word" },
     [",c"] = { "*Ncgn", desc = "Replace same word" },
     [",g"] = { function() utils.toggle_term_cmd "lazygit" end, desc = "ToggleTerm lazygit" },
     [",f"] = { function() require("telescope.builtin").find_files() end, desc = "Find files" },
     [",s"] = { function() require("spectre").open() end, desc = "Spectre" },
     [",w"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", desc = "Spectre (current word)" },
-    [",d"] = { "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", desc = "File browser" },
+    [",b"] = { "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", desc = "File browser" },
+    [",d"] = { function() require("telescope.builtin").diagnostics() end, desc = "Search diagnostics" },
+    [",t"] = { "<cmd>TroubleToggle<CR>", desc = "Toogle trouble" },
 
     ["<F7>"] = false,
     ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },
@@ -40,9 +41,9 @@ return {
   },
   i = {
     ["<c-u>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
-    ["<c-e>"] = { "<esc>A", desc = "go to end" },
+    ["<c-l>"] = { "<esc>A", desc = "go to end" },
     ["<c-h>"] = { "<esc>I", desc = "go to start" },
-    ["<C-i>"] = { "(<esc>Ea)", desc = "wrap ()" },
+    ["<c-i>"] = { "(<esc>Ea)", desc = "wrap ()" },
   },
   v = {
     ["t"] = {":'<,'>TranslateW --engines=google<cr>", desc = "Translate with google" },

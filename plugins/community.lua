@@ -20,20 +20,10 @@ return {
             },
         }
     },
-    { import = "astrocommunity/debugging/nvim-bqf" },
+    -- { import = "astrocommunity/debugging/nvim-bqf" },
+    { import = "astrocommunity/diagnostics/trouble-nvim" },
     -- { import = "astrocommunity/motion/hop-nvim" },
     { import = "astrocommunity/motion/flash-nvim" },
-    { import = "astrocommunity/editing-support/zen-mode-nvim" },
-    {
-        "zen-mode.nvim",
-        opts = {
-            window = {
-                options = {
-                    number = true
-                }
-            }
-        }
-    },
     -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
     { import = "astrocommunity/pack/go" },
     { import = "astrocommunity/pack/docker" },
@@ -52,13 +42,13 @@ return {
     { import = "astrocommunity/editing-support/todo-comments-nvim" },
     -- { import = "astrocommunity/note-taking/neorg" },
     -- { import = "astrocommunity/code-runner/overseer-nvim" },
-    {
-        "stevearc/overseer.nvim",
-        opts = {
-            templates = { "cargo", "make", "npm", "vscode" },
-            template_cache_threshold = 0
-        }
-    },
+    -- {
+    --     "stevearc/overseer.nvim",
+    --     opts = {
+    --         templates = { "cargo", "make", "npm", "vscode" },
+    --         template_cache_threshold = 0
+    --     }
+    -- },
     {
         "nvim-treesitter/nvim-treesitter",
         opts = function(_, opts)
