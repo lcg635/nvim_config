@@ -21,7 +21,8 @@ return {
         }
     },
     { import = "astrocommunity/debugging/nvim-bqf" },
-    { import = "astrocommunity/motion/hop-nvim" },
+    -- { import = "astrocommunity/motion/hop-nvim" },
+    { import = "astrocommunity/motion/flash-nvim" },
     { import = "astrocommunity/editing-support/zen-mode-nvim" },
     {
         "zen-mode.nvim",

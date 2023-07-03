@@ -22,6 +22,7 @@ return {
     [",f"] = { function() require("telescope.builtin").find_files() end, desc = "Find files" },
     [",s"] = { function() require("spectre").open() end, desc = "Spectre" },
     [",w"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", desc = "Spectre (current word)" },
+    [",d"] = { "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", desc = "File browser" },
 
     ["<F7>"] = false,
     ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },
