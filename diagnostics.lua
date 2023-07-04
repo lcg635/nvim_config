@@ -1,5 +1,1 @@
-return {
-    virtual_text = true,
-    underline = true,
-}
-
+return {virtual_text = true, underline = true}

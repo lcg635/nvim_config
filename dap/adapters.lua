@@ -4,7 +4,7 @@ return function(config)
     config.dart = {
         type = "executable",
         command = "node",
-        args = { debugger_path, "flutter" },
+        args = {debugger_path, "flutter"}
     }
     return config
 end

@@ -8,7 +8,7 @@ return {
                 unusedparams = true,
                 unusedwrite = true,
                 useany = true,
-                unreachable = true,
+                unreachable = true
             },
             allExperiments = true,
             experimentalPostfixCompletions = false,
@@ -22,8 +22,8 @@ return {
                 constantValues = true,
                 functionTypeParameters = true,
                 parameterNames = true,
-                rangeVariableTypes = true,
-            },
+                rangeVariableTypes = true
+            }
         }
     }
 }
