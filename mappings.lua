@@ -1,4 +1,5 @@
-local utils = require "astronvim.utils"
+local utils = require("astronvim.utils")
+local fns = require("user.functions")
 
 return {
   -- first key is the mode
@@ -13,6 +14,7 @@ return {
     ["Q"] = { "<cmd>qa<cr>", desc = "Quit all" },
     ["P"] = { "viwp", desc = "Replace Word" },
     ["t"] = {"<cmd>TranslateW<cr>", desc = "Translate with bing" },
+    ["T"] = { function() fns.TranslateZH() end, desc = "translateZH" },
 
     [",q"] = { "<cmd>confirm q<cr>", desc = "Quit" },
     [",r"] = { ':%s/<c-r><c-w>/', desc = "Replace current word" },
@@ -23,7 +25,6 @@ return {
     [",w"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", desc = "Spectre (current word)" },
     [",b"] = { "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", desc = "File browser" },
     [",d"] = { function() require("telescope.builtin").diagnostics() end, desc = "Search diagnostics" },
-    [",t"] = { "<cmd>TroubleToggle<CR>", desc = "Toogle trouble" },
 
     ["<F7>"] = false,
     ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },
@@ -46,8 +47,8 @@ return {
     ["<c-i>"] = { "(<esc>Ea)", desc = "wrap ()" },
   },
   v = {
-    ["t"] = {":'<,'>TranslateW --engines=google<cr>", desc = "Translate with google" },
-    ["T"] = {":'<,'>TranslateW --engines=google --target_lang=en<cr>", desc = "Translate with google" },
+    ["t"] = {":'<,'>TranslateW<cr>", desc = "Translate" },
+    ["T"] = {":'<,'>TranslateW --engines=google<cr>", desc = "Translate with google" },
     -- ["<leader>dv"] = { ":lua require('dap.ui.variables').visual_hover()<CR>", desc = "Debug Hover" },
     -- ["/"] = { "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", desc = "Comment" },
   },

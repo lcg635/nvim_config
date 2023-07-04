@@ -5,6 +5,17 @@ return function()
 
   local basicGroup = vim.api.nvim_create_augroup('basic', {})
 
+
+  vim.api.nvim_create_autocmd({ "VimEnter" }, {
+    group = basicGroup,
+    callback = function()
+      -- get root dir name
+      local root_dir = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+      -- modify titlestring
+      vim.opt.titlestring = root_dir
+    end
+  })
+
   -- 添加离开插入模式后的操作
   vim.api.nvim_create_autocmd({ "InsertLeave" }, {
     group = basicGroup,

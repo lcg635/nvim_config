@@ -12,6 +12,7 @@ return {
     shiftwidth = 4,
     softtabstop = 4,
     guifont = "FiraCode Nerd Font:h8",
+    title = true,
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
