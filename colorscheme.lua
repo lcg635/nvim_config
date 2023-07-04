@@ -1,6 +1,4 @@
-return "kanagawa"
--- return "dayfox"
--- return "nightfox"
--- return "rose-pine-moon"
+-- return "kanagawa"
+return "rose-pine-moon"
 -- return "juliana"
 -- return "onedark"

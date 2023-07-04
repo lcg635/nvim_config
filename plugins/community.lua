@@ -21,9 +21,38 @@ return {
         }
     },
     -- { import = "astrocommunity/debugging/nvim-bqf" },
-    { import = "astrocommunity/diagnostics/trouble-nvim" },
-    -- { import = "astrocommunity/motion/hop-nvim" },
-    { import = "astrocommunity/motion/flash-nvim" },
+    -- { import = "astrocommunity/diagnostics/trouble-nvim" },
+    { import = "astrocommunity/motion/hop-nvim" },
+    {
+        "phaazon/hop.nvim",
+        keys = {
+            {
+              "s",
+              function() require("hop").hint_words() end,
+              mode = { "n" },
+              desc = "Hop hint words",
+            },
+            {
+              "<S-s>",
+              function() require("hop").hint_char1() end,
+              mode = { "n" },
+              desc = "Hop hint char1",
+            },
+            {
+              "s",
+              function() require("hop").hint_words { extend_visual = true } end,
+              mode = { "v" },
+              desc = "Hop hint words",
+            },
+            {
+              "<S-s>",
+              function() require("hop").hint_char1 { extend_visual = true } end,
+              mode = { "v" },
+              desc = "Hop hint char1",
+            },
+        },
+    },
+    { import = "astrocommunity/motion/vim-matchup" },
     -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
     { import = "astrocommunity/pack/go" },
     { import = "astrocommunity/pack/docker" },
@@ -37,9 +66,9 @@ return {
             open_cmd = "70vnew"
         }
     },
-    -- { import = "astrocommunity/motion/nvim-surround" },
     -- { import = "astrocommunity/motion/nvim-spider" },
     { import = "astrocommunity/editing-support/todo-comments-nvim" },
+    { import = "astrocommunity/motion/nvim-surround" },
     -- { import = "astrocommunity/note-taking/neorg" },
     -- { import = "astrocommunity/code-runner/overseer-nvim" },
     -- {

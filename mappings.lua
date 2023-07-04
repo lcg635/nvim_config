@@ -33,16 +33,16 @@ return {
     ["<leader>fT"] = { function() require("telescope.builtin").colorscheme { enable_preview = true } end, desc = "Find themes" },
     ["<leader>ft"] = { "<cmd>TodoTelescop<cr>", desc = "Find todo" },
     ["<leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Find projects" },
-    ["<leader>bR"] = { '<cmd>e!<cr>', desc = "Refresh buffers" },
-    ["<leader>lA"] = { '<cmd>LspRestart<cr>', desc = "Restart lsp" },
+    ["<leader>bR"] = { "<cmd>e!<cr>", desc = "Refresh buffers" },
+    ["<leader>lA"] = { "<cmd>LspRestart<cr>", desc = "Restart lsp" },
     ["<leader>ua"] = { "<cmd>ASToggle<cr>", desc = "Toggle auto-save" },
     ["<leader>uc"] = { "<cmd>Copilot toggle<cr>", desc = "Toggle copilot" },
     ["<leader>up"] = { "<cmd>PlantumlToggle<cr>", desc = "Toggle plantuml" },
   },
   i = {
     ["<c-u>"] = { function() vim.lsp.buf.signature_help() end, desc = "Signature help" },
-    ["<c-l>"] = { "<esc>A", desc = "go to end" },
-    ["<c-h>"] = { "<esc>I", desc = "go to start" },
+    ["<c-k>"] = { "<esc>A", desc = "go to end" },
+    ["<c-j>"] = { "<esc>I", desc = "go to start" },
     ["<c-i>"] = { "(<esc>Ea)", desc = "wrap ()" },
   },
   v = {
@@ -55,6 +55,7 @@ return {
     ["<F7>"] = false,
     ["<F11>"] = { "<cmd>1ToggleTerm<cr>", desc = "Toggle terminal" },
     ["<F12>"] = { "<cmd>2ToggleTerm<cr>", desc = "ToggleTerm horizontal split" },
+    ["<esc>"] = { "<c-\\><c-n>", desc = "Esc" },
   },
   c = {
     ["<c-w>"] = { "<c-r><c-w>", desc = "Copy current word to command prompt" }

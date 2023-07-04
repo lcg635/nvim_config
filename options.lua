@@ -8,9 +8,9 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
-    -- tabstop = 2,
-    -- shiftwidth = 2,
-    -- softtabstop = 2,
+    tabstop = 4,
+    shiftwidth = 4,
+    softtabstop = 4,
     guifont = "FiraCode Nerd Font:h8",
   },
   g = {
