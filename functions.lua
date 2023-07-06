@@ -14,7 +14,7 @@ Fn.Make = function()
                             "make -qp | awk -F':' '/^[a-zA-Z0-9][^$#\\/\\t=]*:([^=]|$)/ {split($1,A,/ /);for(i in A)print A[i]}'")
         -- ui select targets
         vim.ui.select(targets, {}, function(t)
-            if t == "" then
+            if t == "" or t == nil then
                 return
             end
 
