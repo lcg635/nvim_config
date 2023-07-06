@@ -76,7 +76,10 @@ return {
         ["<leader>up"] = {"<cmd>PlantumlToggle<cr>", desc = "Toggle plantuml"},
         ["<leader>pr"] = {"<cmd>AstroReload<cr>", desc = "Astronvim reload"},
         ["<leader>z"] = {desc = "ZK note"},
-        ["<leader>m"] = {fns.Make, desc = "Make"}
+        ["<leader>r"] = {fns.Make, desc = "Run make"},
+        ["<leader>q"] = {desc = "Quickfix"},
+        ["<leader>ql"] = {"<cmd>copen<cr>", desc = "List quickfix"},
+        ["<leader>qn"] = {"<cmd>cnext<cr>", desc = "Next quickfix"}
     },
     i = {
         ["<c-u>"] = {
