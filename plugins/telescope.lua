@@ -13,6 +13,8 @@ return {
         end
     }, {
         "lpoto/telescope-docker.nvim",
+        dependencies = {"nvim-telescope/telescope.nvim"},
+        event = "VeryLazy",
         config = function() require("telescope").load_extension("docker") end
     }
 }

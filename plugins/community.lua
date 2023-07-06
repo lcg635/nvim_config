@@ -48,7 +48,7 @@ return {
             }
         }
     }, {import = "astrocommunity/motion/vim-matchup"},
-    {import = "astrocommunity/pack/go"},
+    -- {import = "astrocommunity/pack/go"},
     {import = "astrocommunity/pack/docker"},
     {import = "astrocommunity/pack/rust"}, {import = "astrocommunity/pack/cpp"},
     {import = "astrocommunity/project/project-nvim"},

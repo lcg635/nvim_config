@@ -26,7 +26,7 @@ return {
         ["Q"] = {"<cmd>qa<cr>", desc = "Quit all"},
         ["P"] = {"viwp", desc = "Replace Word"},
         ["t"] = {"<cmd>TranslateW<cr>", desc = "Translate with bing"},
-        ["T"] = {function() fns.TranslateZH() end, desc = "translateZH"},
+        ["T"] = {fns.TranslateZH, desc = "translateZH"},
 
         [",q"] = {"<cmd>confirm q<cr>", desc = "Quit"},
         [",r"] = {':%s/<c-r><c-w>/', desc = "Replace current word"},
@@ -73,7 +73,10 @@ return {
         ["<leader>lA"] = {"<cmd>LspRestart<cr>", desc = "Restart lsp"},
         ["<leader>ua"] = {"<cmd>ASToggle<cr>", desc = "Toggle auto-save"},
         ["<leader>uc"] = {"<cmd>Copilot toggle<cr>", desc = "Toggle copilot"},
-        ["<leader>up"] = {"<cmd>PlantumlToggle<cr>", desc = "Toggle plantuml"}
+        ["<leader>up"] = {"<cmd>PlantumlToggle<cr>", desc = "Toggle plantuml"},
+        ["<leader>pr"] = {"<cmd>AstroReload<cr>", desc = "Astronvim reload"},
+        ["<leader>z"] = {desc = "ZK note"},
+        ["<leader>m"] = {fns.Make, desc = "Make"}
     },
     i = {
         ["<c-u>"] = {

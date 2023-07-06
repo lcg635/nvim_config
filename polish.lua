@@ -32,4 +32,7 @@ return function()
         callback = function() vim.cmd("Neotree show") end
     })
 
+    if vim.fn.filereadable('.vscode/launch.json') then
+        require('dap.ext.vscode').load_launchjs()
+    end
 end
