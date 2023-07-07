@@ -19,6 +19,14 @@ return {
             desc = "Previous buffer"
         },
         ["<s-enter>"] = {"zt", desc = "Top The Line"},
+        ["C"] = {
+            function()
+                require("Comment.api").toggle.linewise.count(vim.v.count > 0 and
+                                                                 vim.v.count or
+                                                                 1)
+            end,
+            desc = "Toggle comment line"
+        },
 
         ["|"] = {"<cmd>split<cr>", desc = "Horizontal split"},
         ["\\"] = {"<cmd>vsp<cr>", desc = "Vertical split"},
@@ -95,9 +103,14 @@ return {
         ["T"] = {
             ":'<,'>TranslateW --engines=google<cr>",
             desc = "Translate with google"
-        }
+        },
         -- ["<leader>dv"] = { ":lua require('dap.ui.variables').visual_hover()<CR>", desc = "Debug Hover" },
         -- ["/"] = { "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", desc = "Comment" },
+
+        ["C"] = {
+            "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
+            desc = "Toggle comment for selection"
+        }
     },
     t = {
         ["<F7>"] = false,
