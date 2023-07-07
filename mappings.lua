@@ -18,8 +18,7 @@ return {
             end,
             desc = "Previous buffer"
         },
-        ["<s-enter>"] = {"zt", desc = "Top The Line"},
-        ["C"] = {
+        ["<a-c>"] = {
             function()
                 require("Comment.api").toggle.linewise.count(vim.v.count > 0 and
                                                                  vim.v.count or
@@ -27,10 +26,15 @@ return {
             end,
             desc = "Toggle comment line"
         },
+        ["<a-h>"] = {"<c-w>h"},
+        ["<a-l>"] = {"<c-w>l"},
+        ["<a-k>"] = {"<c-w>k"},
+        ["<a-j>"] = {"<c-w>j"},
 
         ["|"] = {"<cmd>split<cr>", desc = "Horizontal split"},
         ["\\"] = {"<cmd>vsp<cr>", desc = "Vertical split"},
         ["<cr>"] = {"zz", desc = "Center The Line"},
+        ["<s-enter>"] = {"zt", desc = "Top The Line"},
         ["Q"] = {"<cmd>qa<cr>", desc = "Quit all"},
         ["P"] = {"viwp", desc = "Replace Word"},
         ["t"] = {"<cmd>TranslateW<cr>", desc = "Translate with bing"},
@@ -49,7 +53,9 @@ return {
         },
         [",s"] = {function() require("spectre").open() end, desc = "Spectre"},
         [",w"] = {
-            "<cmd>lua require('spectre').open_visual({select_word=true})<CR>",
+            function()
+                require('spectre').open_visual({select_word = true})
+            end,
             desc = "Spectre (current word)"
         },
         [",b"] = {
@@ -69,13 +75,7 @@ return {
         },
 
         ["<leader>."] = {"<cmd>cd %:p:h<cr>", desc = "Set CWD"},
-        ["<leader>ud"] = {"<cmd>DBUIToggle<cr>", desc="Toggle db"},
-        ["<leader>fT"] = {
-            function()
-                require("telescope.builtin").colorscheme {enable_preview = true}
-            end,
-            desc = "Find themes"
-        },
+        ["<leader>ud"] = {"<cmd>DBUIToggle<cr>", desc = "Toggle db"},
         ["<leader>ft"] = {"<cmd>TodoTelescop<cr>", desc = "Find todo"},
         ["<leader>fp"] = {"<cmd>Telescope projects<cr>", desc = "Find projects"},
         ["<leader>bR"] = {"<cmd>e!<cr>", desc = "Refresh buffers"},
@@ -91,13 +91,14 @@ return {
         ["<leader>qn"] = {"<cmd>cnext<cr>", desc = "Next quickfix"}
     },
     i = {
-        ["<c-u>"] = {
+        ["<a-u>"] = {
             function() vim.lsp.buf.signature_help() end,
             desc = "Signature help"
         },
-        ["<c-k>"] = {"<esc>A", desc = "go to end"},
-        ["<c-j>"] = {"<esc>I", desc = "go to start"},
-        ["<c-i>"] = {"(<esc>Ea)", desc = "wrap ()"}
+        ["<a-l>"] = {"<esc>A", desc = "go to end"},
+        ["<a-h>"] = {"<esc>I", desc = "go to start"},
+        ["<a-i>"] = {"(<esc>Ea)", desc = "wrap ()"},
+        ["<a-v>"] = {"<esc>pa", desc = "Paste"}
     },
     v = {
         ["t"] = {":'<,'>TranslateW<cr>", desc = "Translate"},
@@ -105,10 +106,7 @@ return {
             ":'<,'>TranslateW --engines=google<cr>",
             desc = "Translate with google"
         },
-        -- ["<leader>dv"] = { ":lua require('dap.ui.variables').visual_hover()<CR>", desc = "Debug Hover" },
-        -- ["/"] = { "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", desc = "Comment" },
-
-        ["C"] = {
+        ["<a-c>"] = {
             "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
             desc = "Toggle comment for selection"
         }
@@ -120,7 +118,11 @@ return {
             "<cmd>2ToggleTerm<cr>",
             desc = "ToggleTerm horizontal split"
         },
-        ["<esc>"] = {"<c-\\><c-n>", desc = "Esc"}
+        ["<esc>"] = {"<c-\\><c-n>", desc = "Esc"},
+        ["<a-k>"] = {"<c-\\><c-n><c-w>k"},
+        ["<a-h>"] = {"<c-\\><c-n><c-w>h"},
+        ["<a-j>"] = {"<c-\\><c-n><c-w>j"},
+        ["<a-l>"] = {"<c-\\><c-n><c-w>l"}
     },
     c = {
         ["<c-w>"] = {"<c-r><c-w>", desc = "Copy current word to command prompt"}
