@@ -1,5 +1,6 @@
 local Fn = {}
 
+-- translate chinese word from input to english
 Fn.TranslateZH = function()
     if vim.fn.has("linux") == 1 then io.popen("fcitx5-remote -o 2") end
     -- get word from input
@@ -8,6 +9,7 @@ Fn.TranslateZH = function()
     end)
 end
 
+-- select makefile target and run
 Fn.Make = function()
     if vim.fn.filereadable("Makefile") == 1 then
         -- grep make file targets
@@ -19,7 +21,6 @@ Fn.Make = function()
         end
         -- ui select targets
         vim.ui.select(targets, {}, function(text)
-            vim.notify(text)
             if text ~= nil then vim.cmd("make " .. text) end
         end)
     else

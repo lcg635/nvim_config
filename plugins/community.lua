@@ -47,7 +47,7 @@ return {
                 desc = "Hop hint char1"
             }
         }
-    }, {import = "astrocommunity/motion/vim-matchup"},
+    },
     -- {import = "astrocommunity/pack/go"},
     {import = "astrocommunity/pack/docker"},
     {import = "astrocommunity/pack/rust"}, {import = "astrocommunity/pack/cpp"},
@@ -64,5 +64,12 @@ return {
                                             opts.ensure_installed, "make")
             end
         end
-    }, {import = "astrocommunity/scrolling/neoscroll-nvim"}
+    }, {import = "astrocommunity/scrolling/neoscroll-nvim"},
+    {import = "astrocommunity/pack/full-dadbod"},
+    {
+        "kristijanhusak/vim-dadbod-ui",
+        config = function (_, opts)
+            vim.g.db_ui_win_position = "right"
+        end
+    }
 }

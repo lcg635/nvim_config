@@ -69,6 +69,7 @@ return {
         },
 
         ["<leader>."] = {"<cmd>cd %:p:h<cr>", desc = "Set CWD"},
+        ["<leader>ud"] = {"<cmd>DBUIToggle<cr>", desc="Toggle db"},
         ["<leader>fT"] = {
             function()
                 require("telescope.builtin").colorscheme {enable_preview = true}
