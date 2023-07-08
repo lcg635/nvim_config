@@ -54,14 +54,15 @@ return {
             end,
             desc = "Spectre (current word)"
         },
-        [",b"] = {
+        [",d"] = {
             "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>",
             desc = "File browser"
         },
-        [",d"] = {
+        [",b"] = {
             function() require("telescope.builtin").diagnostics() end,
             desc = "Search diagnostics"
         },
+        [",e"] = {fns.Make, desc = "Run make"},
 
         ["<F7>"] = false,
         ["<F11>"] = {"<cmd>1ToggleTerm<cr>", desc = "Toggle terminal"},
@@ -81,7 +82,6 @@ return {
         ["<leader>up"] = {"<cmd>PlantumlToggle<cr>", desc = "Toggle plantuml"},
         ["<leader>pr"] = {"<cmd>AstroReload<cr>", desc = "Astronvim reload"},
         ["<leader>z"] = {desc = "ZK note"},
-        ["<leader>r"] = {fns.Make, desc = "Run make"},
         ["<leader>q"] = {desc = "Quickfix"},
         ["<leader>ql"] = {"<cmd>copen<cr>", desc = "List quickfix"},
         ["<leader>qn"] = {"<cmd>cnext<cr>", desc = "Next quickfix"},

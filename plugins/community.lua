@@ -71,5 +71,5 @@ return {
         config = function (_, opts)
             vim.g.db_ui_win_position = "right"
         end
-    }
+    },
 }
