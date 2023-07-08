@@ -26,10 +26,6 @@ return {
             end,
             desc = "Toggle comment line"
         },
-        ["<a-h>"] = {"<c-w>h"},
-        ["<a-l>"] = {"<c-w>l"},
-        ["<a-k>"] = {"<c-w>k"},
-        ["<a-j>"] = {"<c-w>j"},
 
         ["|"] = {"<cmd>split<cr>", desc = "Horizontal split"},
         ["\\"] = {"<cmd>vsp<cr>", desc = "Vertical split"},
@@ -88,16 +84,20 @@ return {
         ["<leader>r"] = {fns.Make, desc = "Run make"},
         ["<leader>q"] = {desc = "Quickfix"},
         ["<leader>ql"] = {"<cmd>copen<cr>", desc = "List quickfix"},
-        ["<leader>qn"] = {"<cmd>cnext<cr>", desc = "Next quickfix"}
+        ["<leader>qn"] = {"<cmd>cnext<cr>", desc = "Next quickfix"},
+
+        ["<leader>m"] = {desc = "Media"},
+        ["<leader>mp"] = {"<cmd>silent !playerctl previous<cr>", desc = "Media previous"},
+        ["<leader>mn"] = {"<cmd>silent !playerctl next<cr>", desc = "Media next"},
     },
     i = {
-        ["<a-u>"] = {
+        ["<c-u>"] = {
             function() vim.lsp.buf.signature_help() end,
             desc = "Signature help"
         },
-        ["<a-l>"] = {"<esc>A", desc = "go to end"},
-        ["<a-h>"] = {"<esc>I", desc = "go to start"},
-        ["<a-i>"] = {"(<esc>Ea)", desc = "wrap ()"},
+        ["<c-i>"] = {"<esc>A", desc = "go to end"},
+        ["<c-h>"] = {"<esc>I", desc = "go to start"},
+        ["<c-m>"] = {"(<esc>Ea)", desc = "wrap ()"},
         ["<a-v>"] = {"<esc>pa", desc = "Paste"}
     },
     v = {
@@ -119,10 +119,7 @@ return {
             desc = "ToggleTerm horizontal split"
         },
         ["<esc>"] = {"<c-\\><c-n>", desc = "Esc"},
-        ["<a-k>"] = {"<c-\\><c-n><c-w>k"},
-        ["<a-h>"] = {"<c-\\><c-n><c-w>h"},
-        ["<a-j>"] = {"<c-\\><c-n><c-w>j"},
-        ["<a-l>"] = {"<c-\\><c-n><c-w>l"}
+        ["<c-k>"] = {"<c-\\><c-n><c-w>k"},
     },
     c = {
         ["<c-w>"] = {"<c-r><c-w>", desc = "Copy current word to command prompt"}
