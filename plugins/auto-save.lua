@@ -9,7 +9,8 @@ return {
                 local utils = require("auto-save.utils.data")
 
                 if fn.getbufvar(buf, "&modifiable") == 1 and
-                    utils.not_in(fn.getbufvar(buf, "&filetype"), {"sql"}) then
+                    utils.not_in(fn.getbufvar(buf, "&filetype"),
+                                 {"sql", "mysql"}) then
                     local undotree = vim.fn.undotree()
                     -- don't save if the last change was an undo or redo
                     if undotree.seq_last ~= undotree.seq_cur then

@@ -47,10 +47,11 @@ return {
                 desc = "Hop hint char1"
             }
         }
-    },
-    -- {import = "astrocommunity/pack/go"},
+    }, -- {import = "astrocommunity/pack/go"},
     {import = "astrocommunity/pack/docker"},
     {import = "astrocommunity/pack/rust"}, {import = "astrocommunity/pack/cpp"},
+    {import = "astrocommunity/pack/python"},
+    {import = "astrocommunity/pack/dart"},
     {import = "astrocommunity/project/project-nvim"},
     {import = "astrocommunity/project/nvim-spectre"},
     {"nvim-pack/nvim-spectre", opts = {open_cmd = "70vnew"}},
@@ -65,11 +66,23 @@ return {
             end
         end
     }, {import = "astrocommunity/scrolling/neoscroll-nvim"},
-    {import = "astrocommunity/pack/full-dadbod"},
-    {
+    {import = "astrocommunity/pack/full-dadbod"}, {
         "kristijanhusak/vim-dadbod-ui",
-        config = function (_, opts)
+        config = function()
             vim.g.db_ui_win_position = "right"
+            vim.g.Db_ui_buffer_name_generator = function(_)
+                -- get time string
+                local time = os.date("%Y-%m-%d-%H-%M-%S", os.time())
+                return time .. ".sql"
+            end
+            vim.g.db_ui_table_helpers = {
+                mysql = {
+                    List = "SELECT * FROM `{table}` LIMIT 10",
+                    Truncate = "TRUNCATE TABLE `{table}`"
+                }
+            }
         end
-    },
+    }, {import = "astrocommunity/bars-and-lines/smartcolumn-nvim"},
+    {"m4xshen/smartcolumn.nvim", opts = {colorcolumn = 100}},
+    {import = "astrocommunity/completion/cmp-cmdline"}
 }

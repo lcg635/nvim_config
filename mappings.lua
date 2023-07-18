@@ -72,7 +72,6 @@ return {
         },
 
         ["<leader>."] = {"<cmd>cd %:p:h<cr>", desc = "Set CWD"},
-        ["<leader>ud"] = {"<cmd>DBUIToggle<cr>", desc = "Toggle db"},
         ["<leader>ft"] = {"<cmd>TodoTelescop<cr>", desc = "Find todo"},
         ["<leader>fp"] = {"<cmd>Telescope projects<cr>", desc = "Find projects"},
         ["<leader>bR"] = {"<cmd>e!<cr>", desc = "Refresh buffers"},
@@ -86,9 +85,9 @@ return {
         ["<leader>ql"] = {"<cmd>copen<cr>", desc = "List quickfix"},
         ["<leader>qn"] = {"<cmd>cnext<cr>", desc = "Next quickfix"},
 
-        ["<leader>m"] = {desc = "Media"},
-        ["<leader>mp"] = {"<cmd>silent !playerctl previous<cr>", desc = "Media previous"},
-        ["<leader>mn"] = {"<cmd>silent !playerctl next<cr>", desc = "Media next"},
+        ["<leader>m"] = {desc = "DBUI"},
+        ["<leader>mm"] = {"<cmd>set cmdheight=2<cr><cmd>DBUI<cr>", desc = "Open db"},
+        ["<leader>mc"] = {"<cmd>set cmdheight=0<cr><cmd>DBUIClose<cr>", desc = "Close db"},
     },
     i = {
         ["<c-u>"] = {
